@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Augustine Promise Oburuoga | Applied Geologist &amp; Reservoir Geoscientist</title>
+<meta name="description" content="Portfolio of Augustine Promise Oburuoga: B.Tech Applied Geology graduate working in seismic interpretation, well log correlation, subsurface mapping and geotechnical engineering.">
+<meta name="theme-color" content="#0E1A2B">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1A2B;
+  --navy-2:#15263D;
+  --navy-3:#1E3350;
+  --bone:#ECE8DD;
+  --muted:#A3B3C6;
+  --sand:#D9A75A;
+  --iron:#C0603A;
+  --shale:#6B7C8F;
+  --lime:#CFC8B4;
+  --soil:#6A5238;
+  --base:#2E3444;
+  --rail:132px;
+  --strip:34px;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--navy);color:var(--bone);
+  font-family:var(--text);font-size:1.125rem;line-height:1.68;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sand);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--sand);color:var(--navy);padding:.6rem 1rem;z-index:100;font-family:var(--display);font-weight:700}
+.skip:focus{left:0}
+
+/* ---------- formation sections & the log rail ---------- */
+.formation{position:relative;padding:clamp(4.5rem,9vw,8rem) clamp(1.25rem,4vw,3.5rem) clamp(4.5rem,9vw,8rem) calc(var(--rail) + clamp(0rem,2vw,1.5rem))}
+.formation > .inner{max-width:1000px}
+.strip{position:absolute;left:0;top:0;bottom:0;width:var(--strip);display:block}
+.strip svg{width:100%;height:100%;display:block}
+.tick{position:absolute;left:calc(var(--strip) + 12px);top:clamp(4.5rem,9vw,8rem);
+  font-family:var(--display);font-stretch:100%;font-size:.8rem;line-height:1.25;color:var(--muted);
+  display:flex;flex-direction:column;padding-top:.15rem}
+.tick::before{content:"";position:absolute;left:-12px;top:.85rem;width:10px;height:2px;background:var(--bone)}
+.tick b{font-weight:700;color:var(--bone);font-variant-numeric:tabular-nums;padding-left:.15rem}
+.tick i{font-style:normal;padding-left:.15rem;margin-top:.15rem}
+.formation + .formation{border-top:1px solid rgba(236,232,221,.14)}
+
+h1,h2,h3{font-family:var(--display);margin:0;font-weight:800;letter-spacing:-.01em}
+h1{font-stretch:66%;font-size:clamp(3rem,8vw,6.6rem);line-height:.9;font-weight:850}
+h2{font-stretch:78%;font-size:clamp(2.3rem,5.4vw,4rem);line-height:1;margin-bottom:1.5rem}
+h3{font-stretch:92%;font-size:1.3rem;line-height:1.25;font-weight:700}
+p{margin:0 0 1.1rem;max-width:62ch}
+.lede{font-size:clamp(1.2rem,2vw,1.4rem);line-height:1.55;color:var(--bone)}
+.muted{color:var(--muted)}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(2.5rem,6vw,5rem);min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero .tick{top:clamp(2.5rem,6vw,5rem)}
+.hero .inner{max-width:1180px;width:100%;position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.who{font-family:var(--display);font-stretch:100%;font-weight:600;font-size:1.05rem;color:var(--sand);margin:0 0 1.1rem}
+.hero h1{margin-bottom:1.6rem}
+.hero .lede{max-width:44ch;margin-bottom:2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2.2rem}
+.btn{display:inline-block;font-family:var(--display);font-stretch:100%;font-weight:700;font-size:1rem;text-decoration:none;
+  padding:.85rem 1.4rem;border-radius:4px;border:2px solid var(--sand);transition:background .2s,color .2s}
+.btn.solid{background:var(--sand);color:var(--navy)}
+.btn.solid:hover{background:var(--bone);border-color:var(--bone)}
+.btn.ghost{color:var(--sand)}
+.btn.ghost:hover{background:rgba(217,167,90,.14)}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem 2rem;margin:0;padding:0;list-style:none;font-family:var(--display);font-stretch:100%;font-size:.95rem;color:var(--muted)}
+.facts li{padding-left:.9rem;border-left:3px solid var(--iron)}
+.portrait{position:relative;justify-self:end;width:100%;max-width:380px}
+.portrait::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:2px solid var(--sand);border-radius:6px;opacity:.7}
+.portrait img{position:relative;border-radius:6px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.contours{position:absolute;right:-8%;top:-10%;width:74%;height:auto;opacity:.16;z-index:0;pointer-events:none}
+
+/* ---------- profile ---------- */
+.profile-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.profile-grid img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;max-width:400px}
+.badges{list-style:none;margin:1.6rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.badges li{font-family:var(--display);font-stretch:100%;font-weight:600;font-size:.92rem;padding:.35rem .8rem;border:1px solid rgba(236,232,221,.32);border-radius:999px}
+
+/* ---------- the course ---------- */
+.degree{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin:2.2rem 0 3rem;padding:1.5rem 0;border-block:1px solid rgba(236,232,221,.2)}
+.degree div{min-width:0}
+.degree dt{font-family:var(--display);font-stretch:100%;font-size:.9rem;color:var(--muted);margin-bottom:.2rem}
+.degree dd{margin:0;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:1.35rem;line-height:1.25}
+.modules-title{margin-bottom:.4rem}
+.modules-hint{color:var(--muted);font-size:1rem;margin-bottom:1.4rem}
+details.mod{border-top:1px solid rgba(236,232,221,.2)}
+details.mod:last-of-type{border-bottom:1px solid rgba(236,232,221,.2)}
+details.mod summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:1rem;padding:1.05rem .25rem;
+  font-family:var(--display);font-stretch:88%;font-weight:700;font-size:1.35rem}
+details.mod summary::-webkit-details-marker{display:none}
+details.mod summary .sw{width:26px;height:26px;border-radius:3px;flex:none;border:1px solid rgba(236,232,221,.35)}
+details.mod summary .pm{margin-left:auto;width:16px;height:16px;position:relative;flex:none}
+details.mod summary .pm::before,details.mod summary .pm::after{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:var(--sand);transition:transform .25s}
+details.mod summary .pm::after{transform:rotate(90deg)}
+details.mod[open] summary .pm::after{transform:rotate(0)}
+details.mod summary:hover{color:var(--sand)}
+details.mod .body{padding:0 .25rem 1.4rem calc(26px + 1rem + .25rem)}
+details.mod .body p{margin-bottom:.7rem}
+.use{color:var(--muted)}
+.use strong{color:var(--bone);font-weight:600}
+
+/* ---------- experience ---------- */
+.job{display:grid;grid-template-columns:minmax(0,.32fr) minmax(0,1fr);gap:.5rem clamp(1.5rem,4vw,3rem);padding:2rem 0;border-top:1px solid rgba(236,232,221,.2)}
+.job:last-of-type{border-bottom:1px solid rgba(236,232,221,.2)}
+.when{font-family:var(--display);font-stretch:100%;font-weight:600;color:var(--sand);font-size:1rem;line-height:1.4}
+.where{display:block;color:var(--muted);font-weight:500}
+.job h3{margin-bottom:.15rem}
+.job .org{font-family:var(--display);font-stretch:100%;font-weight:500;color:var(--muted);margin-bottom:1rem;font-size:1rem}
+.job ul{margin:0;padding-left:1.15rem;max-width:64ch}
+.job li{margin-bottom:.55rem;padding-left:.2rem}
+.job li::marker{color:var(--sand)}
+.job.feature{background:linear-gradient(90deg,rgba(217,167,90,.09),rgba(217,167,90,0) 70%);padding-inline:1.25rem;margin-inline:-1.25rem;border-radius:4px}
+.job.feature h3{font-size:1.7rem}
+
+/* ---------- toolkit ---------- */
+.kit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem clamp(2rem,5vw,4rem)}
+.kit section{border-left:5px solid var(--c,var(--sand));padding-left:1.25rem}
+.kit h3{margin-bottom:.7rem}
+.kit ul{list-style:none;margin:0;padding:0}
+.kit li{padding:.28rem 0;border-bottom:1px solid rgba(236,232,221,.12);font-size:1.02rem;line-height:1.45}
+.kit li:last-child{border-bottom:0}
+
+/* ---------- credentials ---------- */
+.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem clamp(2rem,5vw,4rem)}
+.creds h3{margin-bottom:1rem;color:var(--sand)}
+.creds ul{list-style:none;margin:0;padding:0}
+.creds li{padding:.8rem 0;border-top:1px solid rgba(236,232,221,.18)}
+.creds li:last-child{border-bottom:1px solid rgba(236,232,221,.18)}
+.creds strong{display:block;font-family:var(--display);font-stretch:92%;font-weight:700;font-size:1.12rem;line-height:1.3}
+.creds span{color:var(--muted);font-size:1rem}
+
+/* ---------- contact ---------- */
+.contact h2{font-size:clamp(2.6rem,7vw,5.6rem);font-stretch:70%;max-width:14ch}
+.reach{list-style:none;margin:2.4rem 0 3.5rem;padding:0;max-width:760px}
+.reach li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:1rem;padding:1rem 0;border-top:1px solid rgba(236,232,221,.2);align-items:baseline}
+.reach li:last-child{border-bottom:1px solid rgba(236,232,221,.2)}
+.reach .k{font-family:var(--display);font-stretch:100%;font-size:.95rem;color:var(--muted)}
+.reach a,.reach .v{font-family:var(--display);font-stretch:88%;font-weight:700;font-size:clamp(1.15rem,2.6vw,1.6rem);overflow-wrap:anywhere;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--sand)}
+.reach a:hover{color:var(--sand)}
+footer{font-family:var(--display);font-stretch:100%;font-size:.92rem;color:var(--muted)}
+
+/* ---------- fixed depth readout ---------- */
+.readout{position:fixed;left:12px;bottom:14px;z-index:20;background:rgba(14,26,43,.92);border:1px solid rgba(236,232,221,.3);
+  border-radius:6px;padding:.5rem .8rem;font-family:var(--display);font-stretch:100%;pointer-events:none;backdrop-filter:blur(6px);min-width:104px}
+.readout .d{display:block;font-weight:800;font-size:1.25rem;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--sand)}
+.readout .f{display:block;font-size:.8rem;color:var(--muted)}
+
+/* ---------- one orchestrated moment: the drill-down ---------- */
+.js .hero .strip{clip-path:inset(0 0 100% 0)}
+.js body.ready .hero .strip{clip-path:inset(0 0 0 0);transition:clip-path 1.8s cubic-bezier(.65,0,.25,1)}
+.js .hero .tick{opacity:0}
+.js body.ready .hero .tick{opacity:1;transition:opacity .6s 1.2s}
+
+@media (max-width:900px){
+  .hero-grid,.profile-grid{grid-template-columns:1fr}
+  .portrait{justify-self:start;max-width:320px;margin-right:16px}
+  .profile-grid img{max-width:320px}
+  .kit,.creds{grid-template-columns:1fr}
+  .degree{grid-template-columns:1fr;gap:1rem}
+  .job{grid-template-columns:1fr}
+  .job.feature{margin-inline:-.75rem;padding-inline:.75rem}
+}
+@media (max-width:720px){
+  :root{--rail:34px;--strip:14px}
+  body{font-size:1.05rem}
+  .tick{display:none}
+  .formation{padding-left:calc(var(--rail) + .35rem);padding-right:1.1rem}
+  .readout{left:auto;right:10px;bottom:10px;min-width:0;padding:.35rem .6rem}
+  .readout .d{font-size:1rem}
+  .reach li{grid-template-columns:1fr;gap:.1rem}
+  details.mod .body{padding-left:.25rem}
+  details.mod summary{font-size:1.15rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .hero .strip{clip-path:none!important;transition:none!important}
+  .js .hero .tick{opacity:1!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Lithology patterns used in the log strip (standard geological conventions) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="p-soil" width="14" height="14" patternUnits="userSpaceOnUse">
+      <g fill="#2f2114"><circle cx="3" cy="3" r="1.2"/><circle cx="10" cy="8" r="1"/><circle cx="5" cy="11" r=".9"/></g>
+      <path d="M8 2 l3 0 M1 7 l3 0" stroke="#2f2114" stroke-width="1.2" fill="none"/>
+    </pattern>
+    <pattern id="p-sand" width="10" height="10" patternUnits="userSpaceOnUse">
+      <g fill="#7a5417"><circle cx="2" cy="2" r="1.1"/><circle cx="7" cy="5" r="1.1"/><circle cx="3" cy="8" r="1.1"/></g>
+    </pattern>
+    <pattern id="p-shale" width="18" height="9" patternUnits="userSpaceOnUse">
+      <path d="M1 2 h10 M7 7 h10" stroke="#1f2a37" stroke-width="1.6" fill="none"/>
+    </pattern>
+    <pattern id="p-lime" width="22" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 .5 h22 M0 6.5 h22 M5 .5 v6 M16 6.5 v6" stroke="#6e6752" stroke-width="1.3" fill="none"/>
+    </pattern>
+    <pattern id="p-conglo" width="28" height="28" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#5a2411" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><circle cx="20" cy="10" r="3.2"/><circle cx="12" cy="21" r="4"/><circle cx="24" cy="23" r="2.4"/></g>
+    </pattern>
+    <pattern id="p-base" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M7 3 v8 M3 7 h8" stroke="#8b93a8" stroke-width="1.5" fill="none"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="readout" aria-hidden="true"><span class="d" id="depth">0 m</span><span class="f" id="fm">Surface</span></div>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="formation hero" data-depth="0" data-formation="Surface" aria-labelledby="top">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#6A5238"/><rect width="100%" height="100%" fill="url(#p-soil)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>0 m</b><i>Surface</i></span>
+
+  <svg class="contours" viewBox="-300 -240 600 480" fill="none" stroke="#D9A75A" stroke-width="1.6" aria-hidden="true">
+    <g id="c">
+      <path vector-effect="non-scaling-stroke" transform="scale(.28) rotate(6)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+      <path vector-effect="non-scaling-stroke" transform="scale(.5) rotate(3)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+      <path vector-effect="non-scaling-stroke" transform="scale(.72) rotate(-2)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+      <path vector-effect="non-scaling-stroke" transform="scale(.95) rotate(-6)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+      <path vector-effect="non-scaling-stroke" transform="scale(1.18) rotate(-10)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+      <path vector-effect="non-scaling-stroke" transform="scale(1.42) rotate(-13)" d="M-200 -30C-180 -120 -60 -160 40 -140C140 -120 220 -60 200 30C180 120 80 160 -30 150C-130 140 -220 60 -200 -30Z"/>
+    </g>
+  </svg>
+
+  <div class="inner">
+    <div class="hero-grid">
+      <div>
+        <p class="who">Augustine Promise Oburuoga</p>
+        <h1 id="top">Applied Geology, read one layer at a time.</h1>
+        <p class="lede">I'm an exploration and reservoir geoscientist with a B.Tech in Applied Geology. I work with seismic data, well logs and subsurface maps, and I'm building skills in renewable energy.</p>
+        <div class="actions">
+          <a class="btn solid" href="#course">See what I studied</a>
+          <a class="btn ghost" href="#contact">Contact me</a>
+        </div>
+        <ul class="facts">
+          <li>Federal University of Technology, Akure</li>
+          <li>Second Class Honours, Upper Division</li>
+          <li>Lagos, Nigeria</li>
+        </ul>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <img src="images/portrait-headshot.jpg" width="800" height="1000" alt="Portrait of Augustine Promise Oburuoga in a navy suit and tie">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFILE ================= -->
+<section class="formation" id="profile" data-depth="120" data-formation="Topsoil" aria-labelledby="h-profile">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#6A5238"/><rect width="100%" height="100%" fill="url(#p-soil)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>120 m</b><i>Topsoil</i></span>
+  <div class="inner">
+    <div class="profile-grid">
+      <img src="images/portrait-crossed-arms.png" width="800" height="1000" loading="lazy" alt="Augustine Promise Oburuoga standing with arms crossed in a navy double-breasted suit">
+      <div>
+        <h2 id="h-profile">Profile</h2>
+        <p class="lede">I'm an exploration, petroleum and reservoir geoscientist based in Lagos.</p>
+        <p>At Platform Petroleum Limited I worked in Petrel on seismic interpretation, well log correlation and subsurface mapping. Since then I've widened my skills into geotechnical engineering: soil testing, site investigation and foundation assessment for energy infrastructure projects.</p>
+        <p>Alongside the technical work I hold HSE and project management certifications, and I've led teams and programmes during national service. I want to make exploration more efficient, operations safer and energy development more sustainable.</p>
+        <ul class="badges">
+          <li>SPE member</li>
+          <li>NAPE member</li>
+          <li>HSE certified</li>
+          <li>CAPM &amp; PMP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE COURSE ================= -->
+<section class="formation" id="course" data-depth="480" data-formation="Sandstone" aria-labelledby="h-course">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#D9A75A"/><rect width="100%" height="100%" fill="url(#p-sand)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>480 m</b><i>Sandstone</i></span>
+  <div class="inner">
+    <h2 id="h-course">What I studied: Applied Geology</h2>
+    <p class="lede">Applied Geology uses the science of rock, soil and fluids to solve practical problems: where to look for oil and gas, how a formation behaves under load, and whether ground can carry a structure.</p>
+    <p>My degree covered both sides of that question, the petroleum side and the engineering side. Everything below is a layer of that course, and each one shows up in the work I've done since.</p>
+
+    <dl class="degree">
+      <div><dt>Degree</dt><dd>B.Tech, Applied Geology</dd></div>
+      <div><dt>Institution and years</dt><dd>Federal University of Technology, Akure, 2018 to 2024</dd></div>
+      <div><dt>Classification</dt><dd>Second Class Honours, Upper Division</dd></div>
+    </dl>
+
+    <h3 class="modules-title">Core courses</h3>
+    <p class="modules-hint">Select a course to see what it covers and where I've used it.</p>
+
+    <details class="mod">
+      <summary><span class="sw" style="background:#CFC8B4"></span>Petroleum Geology<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>How oil and gas form, move through rock and get trapped, and how to judge whether a prospect is worth drilling.</p>
+        <p class="use"><strong>In my work:</strong> reservoir characterisation projects at Platform Petroleum Limited.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#C0603A"></span>Structural Geology<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>How rock layers fold, tilt and fracture. Faults and folds decide where hydrocarbons collect and how stable the ground is.</p>
+        <p class="use"><strong>In my work:</strong> spotting structural features on subsurface contour maps and geological cross-sections.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#D9A75A"></span>Sedimentology<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>How sediment is carried, deposited and turned into rock, and how to read past environments from what was left behind.</p>
+        <p class="use"><strong>In my work:</strong> identifying stratigraphic features while building cross-sections.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#6B7C8F"></span>Geophysics<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>Imaging what's underground without digging, using seismic waves and other measurements.</p>
+        <p class="use"><strong>In my work:</strong> seismic interpretation in Petrel.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#8f7a5c"></span>Stratigraphy<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>Ordering rock layers in time and matching them from one place to another.</p>
+        <p class="use"><strong>In my work:</strong> well log correlation across wells.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#6A5238"></span>Soil Mechanics<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>How soil carries load, compacts, drains and fails. It is the basis for safe foundations.</p>
+        <p class="use"><strong>In my work:</strong> applying soil and rock mechanics to formation stability assessments, and building skills in Atterberg limits, Proctor compaction, CBR and shear strength testing.</p>
+      </div>
+    </details>
+    <details class="mod">
+      <summary><span class="sw" style="background:#2E3444"></span>Engineering Geology<span class="pm" aria-hidden="true"></span></summary>
+      <div class="body">
+        <p>Applying geology to construction and infrastructure: reading ground conditions before anything is built on them.</p>
+        <p class="use"><strong>In my work:</strong> site investigation, borehole log interpretation and ground characterisation.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="formation" id="experience" data-depth="1150" data-formation="Shale" aria-labelledby="h-exp">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#56657A"/><rect width="100%" height="100%" fill="url(#p-shale)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>1,150 m</b><i>Shale</i></span>
+  <div class="inner">
+    <h2 id="h-exp">Experience</h2>
+
+    <article class="job feature">
+      <div class="when">Nov 2023 to Mar 2024<span class="where">Victoria Island, Lagos</span></div>
+      <div>
+        <h3>Undergraduate Geoscience Intern</h3>
+        <p class="org">Platform Petroleum Limited</p>
+        <ul>
+          <li>Gained hands-on proficiency in Petrel for geological and geophysical subsurface analysis.</li>
+          <li>Performed seismic interpretation and well log correlation for team-led reservoir characterisation projects.</li>
+          <li>Generated and analysed subsurface contour maps and geological cross-sections to identify structural and stratigraphic features.</li>
+          <li>Applied soil and rock mechanics to subsurface interpretation, supporting geotechnical assessments of formation stability.</li>
+          <li>Visited an oil flow station, gaining direct exposure to hydrocarbon production workflows and flow monitoring.</li>
+          <li>Presented technical findings to senior geoscientists.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">Jun 2025 to Mar 2026<span class="where">Ayetoro, Ogun State</span></div>
+      <div>
+        <h3>Science Tutor</h3>
+        <p class="org">Comprehensive High School (NYSC primary assignment)</p>
+        <ul>
+          <li>Taught science subjects to secondary school students using structured lesson plans aligned with the Nigerian curriculum.</li>
+          <li>Brought the communication and presentation skills from geological training into the classroom.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">2023<span class="where">Victoria Island, Lagos</span></div>
+      <div>
+        <h3>Sales Representative</h3>
+        <p class="org">Dukka Incorporated</p>
+        <ul>
+          <li>Found and engaged prospective clients through networking and referrals, and met or exceeded sales targets.</li>
+          <li>Compiled sales records, customer feedback reports and forecasts for management.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">2022<span class="where">Lagos Island, Lagos</span></div>
+      <div>
+        <h3>Cashier</h3>
+        <p class="org">Eko Electric Distribution Company (EKEDC)</p>
+        <ul>
+          <li>Processed cash, card and electronic transactions with zero-discrepancy daily reconciliation.</li>
+          <li>Followed all safety, security and operational policies.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when">2017 to 2019<span class="where">Lagos Island, Lagos</span></div>
+      <div>
+        <h3>Office Assistant</h3>
+        <p class="org">K. S. Karatu &amp; Co. Legal Practitioners</p>
+        <ul>
+          <li>Prepared, organised and managed confidential legal documents, reports and correspondence.</li>
+          <li>Supported attorneys and senior staff with daily administrative and operational tasks.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= TOOLKIT ================= -->
+<section class="formation" id="toolkit" data-depth="1900" data-formation="Limestone" aria-labelledby="h-kit">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#CFC8B4"/><rect width="100%" height="100%" fill="url(#p-lime)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>1,900 m</b><i>Limestone</i></span>
+  <div class="inner">
+    <h2 id="h-kit">Toolkit</h2>
+    <div class="kit">
+      <section style="--c:#D9A75A">
+        <h3>Geoscience and petroleum</h3>
+        <ul>
+          <li>Petrel software</li>
+          <li>Seismic interpretation</li>
+          <li>Well log correlation</li>
+          <li>Subsurface contour mapping</li>
+          <li>Cross-section analysis</li>
+          <li>Petroleum geology and reservoir analysis</li>
+          <li>Geological field mapping</li>
+        </ul>
+      </section>
+      <section style="--c:#C0603A">
+        <h3>Geotechnical engineering</h3>
+        <ul>
+          <li>Soil testing and classification (AASHTO, USCS)</li>
+          <li>Atterberg limits and particle size analysis</li>
+          <li>Compaction testing (Standard and Modified Proctor)</li>
+          <li>California Bearing Ratio (CBR) testing</li>
+          <li>Shear strength testing (direct shear, triaxial)</li>
+          <li>Site investigation and borehole log interpretation</li>
+          <li>Foundation assessment and bearing capacity analysis</li>
+        </ul>
+      </section>
+      <section style="--c:#6B7C8F">
+        <h3>Project management and HSE</h3>
+        <ul>
+          <li>CAPM and PMP certified</li>
+          <li>ISO 14001 environmental management</li>
+          <li>OHSAS 18001 occupational health and safety</li>
+          <li>Stakeholder management and cross-functional collaboration</li>
+        </ul>
+      </section>
+      <section style="--c:#8f7a5c">
+        <h3>Communication and digital</h3>
+        <ul>
+          <li>Technical presentations and public speaking</li>
+          <li>Meta certified social media marketing, including Meta Ads and analytics</li>
+          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li>Google Workspace (Docs, Sheets, Forms)</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section class="formation" id="credentials" data-depth="2500" data-formation="Conglomerate" aria-labelledby="h-cred">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#C0603A"/><rect width="100%" height="100%" fill="url(#p-conglo)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>2,500 m</b><i>Conglomerate</i></span>
+  <div class="inner">
+    <h2 id="h-cred">Credentials and service</h2>
+    <div class="creds">
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li><strong>HSE: ISO 14001 and OHSAS 18001</strong><span>OZIS Academy, 2025</span></li>
+          <li><strong>CAPM and PMP, Project Management</strong><span>Project Safety &amp; Management Institute (PSMI), Canada</span></li>
+          <li><strong>Meta Certified Social Media Marketing</strong><span>Meta and Coursera, April to July 2023</span></li>
+          <li><strong>Youth Development Summit Certification</strong><span>Lagos State</span></li>
+          <li><strong>NYSC Certificate of Completion</strong><span>National Youth Service Corps, completed March 2026</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Leadership, service and membership</h3>
+        <ul>
+          <li><strong>NYSC SDG CDS President</strong><span>November 2025 to March 2026, after serving as Provost from September 2025</span></li>
+          <li><strong>Independent Monitor, Polio and Meningitis Vaccination Campaign</strong><span>World Health Organisation (WHO), Yewa North, Ogun State, June 2025</span></li>
+          <li><strong>Society of Petroleum Engineers (SPE)</strong><span>Active member</span></li>
+          <li><strong>Nigerian Association of Petroleum Explorationists (NAPE)</strong><span>Active member</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="formation contact" id="contact" data-depth="3100" data-formation="Total depth" aria-labelledby="h-contact">
+  <span class="strip" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="#2E3444"/><rect width="100%" height="100%" fill="url(#p-base)"/></svg></span>
+  <span class="tick" aria-hidden="true"><b>3,100 m</b><i>Total depth</i></span>
+  <div class="inner">
+    <h2 id="h-contact">Let's talk about your next project.</h2>
+    <p class="lede">I'm open to opportunities in exploration geoscience, reservoir studies and renewable energy.</p>
+    <ul class="reach">
+      <li><span class="k">Phone</span><a href="tel:+2349056102385">+234 905 610 2385</a></li>
+      <li><span class="k">LinkedIn</span><a href="https://linkedin.com/in/promise-oburuoga-594715265" target="_blank" rel="noopener">linkedin.com/in/promise-oburuoga-594715265</a></li>
+      <li><span class="k">Based in</span><span class="v">Victoria Island, Lagos</span></li>
+    </ul>
+    <div class="btns">
+      <a class="btn line" href="mailto:prohmees@gmail.com">Send an email</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <footer>
+      <span>© 2026 Augustine Promise Oburuoga</span>
+      <span>References available upon request</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('[data-depth]'));
+  var out=document.getElementById('depth'), nm=document.getElementById('fm');
+  var TD=3100, ticking=false;
+  function top(el){return el.getBoundingClientRect().top+window.scrollY;}
+  function update(){
+    ticking=false;
+    var y=window.scrollY+window.innerHeight*0.4, i=0;
+    for(var k=0;k<secs.length;k++){ if(top(secs[k])<=y) i=k; }
+    var a=secs[i], b=secs[i+1], d0=+a.dataset.depth, at=top(a), d;
+    if(b){
+      var t=Math.min(1,Math.max(0,(y-at)/(top(b)-at)));
+      d=d0+t*(+b.dataset.depth-d0);
+    }else{
+      d=TD;
+    }
+    out.textContent=Math.round(d).toLocaleString('en-US')+' m';
+    nm.textContent=a.dataset.formation;
+  }
+  function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(update);} }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
+  requestAnimationFrame(function(){requestAnimationFrame(function(){document.body.classList.add('ready');});});
+})();
+</script>
+</body>
+</html>
